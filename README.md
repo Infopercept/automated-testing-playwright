@@ -1,15 +1,13 @@
 
 # Playwright Automation
 
-## What is PLaywright?
+## What is Playwright?
 
 Playwright is an open-source automation library for browser testing and web scraping
 
 Developed By Microsoft and launched on 31st Jan 2020
 
 It runs test on 3 types of browsers, Chromium( Edge, Chrome, Brave etc), Firefox (all versions of firefox), Webkit (Safari).
-
-
 
 
 ## Installation
@@ -323,3 +321,15 @@ A page object represents a part of your web application.
 
 An e-commerce web application might have a home page, a listings page and a checkout page. Each of them can be 
 ![POM Demo](image-1.png)
+
+## HTML Report
+
+Playwright provides support to display test result in a HTML format
+
+Add a reporter as HTML in the `playwright.config.ts`
+
+```
+reporter: 'html'
+```
+The output will stored in folder named playwright-report
+![HTML Report](image-3.png)
