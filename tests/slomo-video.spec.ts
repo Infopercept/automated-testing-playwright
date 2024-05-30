@@ -11,6 +11,7 @@ test('SlowMo and video recording demo', async ()=> {
         size: {width: 1800, height: 600}
     }
   });
+  
   const page = await context.newPage();
   
   await page.goto('https://www.google.com')
