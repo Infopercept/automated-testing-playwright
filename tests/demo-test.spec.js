@@ -2,13 +2,14 @@ import {test, expect} from '@playwright/test';
 const { chromium } = require('playwright');
 
 let context;
+let page;
 test.beforeAll(async ({browser}) => {
-  context = browser.newContext();
-  await (await context).tracing.start({
+  context = await browser.newContext();
+  await context.tracing.start({
     snapshots: true,
     screenshots: true
   });
-  page = (await context).newPage();
+  page = context.newPage();
 })
 
 test.afterAll(async ()=>{
@@ -16,8 +17,6 @@ test.afterAll(async ()=>{
 })
 
 test('demo-test' , async () => {
-
-  
 
   const browser = await chromium.launch({
     headless: false
@@ -29,7 +28,7 @@ test('demo-test' , async () => {
   await page.locator('[data-test="username"]').fill('standard_user');
   await page.locator('[data-test="username"]').press('Tab');
   await page.locator('[data-test="password"]').fill('secret_sauce');
-  await page.locator('[data-test="login-button2"]').click();
+  await page.locator('[data-test="login-button"]').click();
   await page.getByRole('button', { name: 'Open Menu' }).click();
   await page.locator('[data-test="logout-sidebar-link"]').click();
 

@@ -1,9 +1,9 @@
-import { test, expect} from '@playwright/test'
+import { test} from '@playwright/test'
 
-test.skip('Test One', async ({page})=>{
-    test.fail()
+test.fail('Test One', async ({page})=>{
+    
 })
 
-test('not yet ready', async ()=>{
-    test.fail();
+test.fail('not yet ready', async ({page})=>{
+    
 })
