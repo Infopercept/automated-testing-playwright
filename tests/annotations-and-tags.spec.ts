@@ -1,9 +1,10 @@
 import { test} from '@playwright/test'
 
-test.fail('Test One', async ({page})=>{
-    
+test('Test One @normal', async ({page})=>{
+    await page.goto("https://youtube.com")
 })
 
-test.fail('not yet ready', async ({page})=>{
-    
+test('not yet ready @slower', async ({page})=>{
+    test.slow()
+    await page.goto("https://youtube.com")
 })

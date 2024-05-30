@@ -12,15 +12,17 @@ test.beforeAll(async ({browser}) => {
   page = context.newPage();
 })
 
-test.afterAll(async ()=>{
+test.afterAll(async ({browser})=>{
   await context.tracing.stop({path: 'test2_trace.zip'})
+  await context.close();
+  await browser.close();
 })
 
-test('demo-test' , async () => {
+test('demo-test' , async ({browser}) => {
 
-  const browser = await chromium.launch({
-    headless: false
-  });
+  // const browser = await chromium.launch({
+  //   headless: false
+  // });
   const context = await browser.newContext();
   const page = await context.newPage();
   await page.goto('https://www.saucedemo.com/');
@@ -33,6 +35,5 @@ test('demo-test' , async () => {
   await page.locator('[data-test="logout-sidebar-link"]').click();
 
   // ---------------------
-  await context.close();
-  await browser.close();
+  
 });
