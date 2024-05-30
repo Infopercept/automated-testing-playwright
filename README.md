@@ -1,16 +1,13 @@
 
 # Playwright Automation
 
-## What is PLaywright?
+## What is Playwright?
 
 Playwright is an open-source automation library for browser testing and web scraping
 
 Developed By Microsoft and launched on 31st Jan 2020
 
 It runs test on 3 types of browsers, Chromium( Edge, Chrome, Brave etc), Firefox (all versions of firefox), Webkit (Safari).
-
-
-
 
 ## Installation
 
@@ -94,7 +91,7 @@ There are 2 ways to write a test code
 1. Manually writing test
 2. Using codegen
 
-1. Manually writing:-
+    1. Manually writing:-
 
 We can always manually write test block code
 
@@ -110,6 +107,8 @@ To use codegen we type into terminal:-
     npx playwright codegen
 
 This will open a browser and a playwright inspector ui
+
+![Playwright Codegen](image.png)
 
 
 ## Headed and Headless mode
@@ -212,3 +211,5 @@ For this we need to use request fixture as argument to the function
 ## Page Object Model
 
 Playwright also supports page object model
+
+![POM Demo](image-1.png)
