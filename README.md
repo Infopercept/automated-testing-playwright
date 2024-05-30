@@ -134,14 +134,14 @@ To view the browser during execution we use headed mode
 
 To use headed mode during execution we add to the command        `--headed`
 ```
-npx playwright test example.spec.ts –headed
+npx playwright test example.spec.ts --headed
 ```
 ![Headed Mode](image-2.png)
-## Debug Mode`
+## Debug Mode
 
 In debug mode we can use playwright inspector to control execution of test
     
-    npx playwright test example.spec.ts –debug
+    npx playwright test example.spec.ts --debug
 
 ## Execution Browser
 
@@ -149,13 +149,13 @@ Playwright supports Chromium, FIrefox and Webkit browsers
 
 We can specify in which browser the test should execute by specifying it in the execution command
 ```
-npx playwright test example.spec.ts –project chromium
+npx playwright test example.spec.ts --project chromium
 ```
 ```
-npx playwright test example.spec.ts –project firefox
+npx playwright test example.spec.ts --project firefox
 ```
 ```
-npx playwright test example.spec.ts –project webkit
+npx playwright test example.spec.ts --project webkit
 ```
 ## Workers
 
@@ -163,7 +163,7 @@ Worker are like threads
 
 We can control the number of workers executing the test
 
-    npx playwright test example.spec.ts –workers 2
+    npx playwright test example.spec.ts --workers 2
 
 ## Assertions
 
