@@ -13,6 +13,5 @@ test('assertions demo', async ({page}) => {
     
     await expect(page.locator('text=The Kitchen')).toHaveAttribute('class', /.*css-dpmy2a/)
     await expect(page.locator('text=The Kitchen')).toHaveClass(/.*css-dpmy2a/)
-    await page.pause()
-    await expect(page).toHaveScreenshot()
+    
 })

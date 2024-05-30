@@ -4,7 +4,7 @@ const { chromium } = require('playwright');
 let context;
 test.beforeAll(async ({browser}) => {
   context = browser.newContext();
-  await (await context).traing.start({
+  await (await context).tracing.start({
     snapshots: true,
     screenshots: true
   });

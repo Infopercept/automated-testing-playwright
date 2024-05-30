@@ -1,14 +1,14 @@
-import {test, expect, chromium} from '@playwright/test'
+import {test, chromium} from '@playwright/test'
 
 test('SlowMo and video recording demo', async ()=> {
   const browser = await chromium.launch({
     slowMo: 50,
-    headless: false
+    headless: true
   });
   const context = await browser.newContext({
     recordVideo: {
         dir: 'desktop',
-        size: {width: 1800, height: 600}
+        // size: {width: 1800, height: 600}
     }
   });
   
